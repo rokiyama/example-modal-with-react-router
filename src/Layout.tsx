@@ -1,8 +1,6 @@
 import { Link, Outlet } from 'react-router-dom'
 
 export const Layout = () => {
-  // const location = useLocation()
-
   return (
     <>
       <Outlet />
@@ -19,13 +17,6 @@ export const Layout = () => {
           </li>
         </ul>
       </div>
-      {/* <div>
-        <button>
-          <Link to="/modal" state={{ background: location }}>
-            Open modal
-          </Link>
-        </button>
-      </div> */}
     </>
   )
 }

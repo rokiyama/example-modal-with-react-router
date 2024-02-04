@@ -6,16 +6,20 @@ export const Modal = () => {
   return (
     <div
       style={{
-        position: 'absolute',
+        position: 'fixed',
         top: 0,
         left: 0,
         width: '100%',
-        height: '100%',
+        height: '100vh',
         backgroundColor: 'rgba(91, 112, 131, 0.4)',
+        overflowY: 'scroll',
+        WebkitOverflowScrolling: 'touch',
+
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
       }}
+      onClick={() => navigate('/')}
     >
       <div
         style={{
@@ -24,9 +28,10 @@ export const Modal = () => {
           borderRadius: 10,
           backgroundColor: 'white',
         }}
+        onClick={(e) => e.stopPropagation()}
       >
         <h1>Modal</h1>
-        <button onClick={() => navigate(-1)}>Close</button>
+        <button onClick={() => navigate('/')}>Close</button>
       </div>
     </div>
   )
